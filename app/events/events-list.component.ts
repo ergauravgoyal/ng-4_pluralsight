@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
 
+
+//Here We are Passing Event1 Object from EVent List to Thumbnail Component
 @Component({
     selector: 'events-list',
-    templateUrl:'app/events/events-list.component.html'
+    template:`
+    <div>
+    <h1>
+        Upcoming Angular Events
+    </h1>
+    <hr/>
+    <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
+</div>
+`
 })
 
 export class EventsListComponent {
-    event = {
+    event1 = {
         id: 1,
         name: 'Angular Connect',
         date: '12/03/2018',
@@ -18,5 +28,8 @@ export class EventsListComponent {
             city: 'London',
             country: 'England'
         }
+    }
+    handleEventClicked(data){
+        console.log('received:',data);
     }
 }
