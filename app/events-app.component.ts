@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     <nav-bar></nav-bar>
     <router-outlet></router-outlet>
     `
-
 })
 
 export class EventAppComponent {
