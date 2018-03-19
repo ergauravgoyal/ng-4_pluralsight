@@ -16,10 +16,13 @@ import {Component} from '@angular/core';
                 display:none;
             }
         }
+        li > a.active{
+            color:#F97924;
+        }
         `
     ]
 })
 
-export default class NavBarComponent{
+export class NavBarComponent{
 
 }
