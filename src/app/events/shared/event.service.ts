@@ -101,7 +101,7 @@ const EVENTS: IEvent[] = [
         date: new Date('4/15/2037'),
         time: '9:00 am',
         price: 950.00,
-        imageUrl: '/images/ng-nl.png',
+        imageUrl: '/assets/images/ng-nl.png',
         location: {
             address: 'The NG-NL Convention Center & Scuba Shop',
             city: 'Amsterdam',
