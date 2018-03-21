@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { ToastrService } from './common/toastr.service';
+import { AuthService } from './users/auth.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ToastrService } from './common/toastr.service';
   providers: [EventService,
         EventRouteActivator,
         ToastrService,
+        AuthService,
         {
           provide: 'canDeactivateCreateEvent',
           useValue: checkDirtyState
