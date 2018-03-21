@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: '',
-    templateUrl: '/app/events/event-details/event-details.component.html',
+    templateUrl: 'event-details.component.html',
     styles: [
         `.container{
             padding-left:20px;

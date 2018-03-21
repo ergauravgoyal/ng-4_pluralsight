@@ -1,21 +1,27 @@
-Angular 2+ Fundamentals Course
-========================
-This is the getting started package for the Pluralsight course on Angular 2 Fundamentals found here: http://app.pluralsight.com/courses/angular-fundamentals
+# MyApp
 
-**Course Status**
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-The course is currently up-to-date with **Angular 4.0**.
+## Development server
 
-Note: This is the course for all versions of Angular since Angular 2.0. The Angular team plans to release a new major version every 6 months and this page will tell you how up-to-date the course is.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-Getting Started
----------------
-Be sure you're running the recommended node version, which is 6.3.0+: `node --version`
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Follow along with the course linked above. To start the server:
+## Build
 
-```
-npm install
-npm start
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

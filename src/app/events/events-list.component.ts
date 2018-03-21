@@ -12,7 +12,7 @@ import { ToastrService } from '../common/toastr.service';
         Upcoming Angular Events
     </h1>
     <hr/>
-    <div class="row">
+    <div>
         <div  *ngFor="let event of events" class="col-md-5">
           <event-thumbnail (click)="handleThumbnailClick(event.name)" [event]="event"></event-thumbnail>
         </div>
