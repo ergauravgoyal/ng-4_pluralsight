@@ -1,3 +1,5 @@
+/*This service will keep track of current user*/
+
 import { Injectable } from '@angular/core';
 import { IUser } from './user.model';
 @Injectable()

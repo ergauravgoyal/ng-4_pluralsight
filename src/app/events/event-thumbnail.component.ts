@@ -49,7 +49,7 @@ export class EventThumbnailComponent {
     logFoo(){
         console.log("Message from Child Component after button click");
     }
-    getStartTimeClass(){
+    getStartTimeClass():any{
         if(this.event && this.event.time==='8:00 am')
             return ["black","bold"]
         return ""
