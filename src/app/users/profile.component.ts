@@ -37,16 +37,18 @@ export class ProfileComponent implements OnInit {
 
   }
   ngOnInit() {
-    let firstName = new FormControl(this.auth.currentUser.firstName);
-    let lastName = new FormControl(this.auth.currentUser.lastName);
+    let firstName = new FormControl(this.auth.currentUser.firstName, Validators.required);
+    let lastName = new FormControl(this.auth.currentUser.lastName, Validators.required);
     this.profileForm = new FormGroup({
       firstName: firstName,
       lastName: lastName
     })
   };
   saveProfile(formValues) {
-    this.auth.updateCurrentUser(formValues.firstName, formValues.lastName);
-    this.router.navigate(['events']);
+    if (this.profileForm.valid) {
+      this.auth.updateCurrentUser(formValues.firstName, formValues.lastName);
+      this.router.navigate(['events']);
+    }
   }
   cancel() {
     this.router.navigate(['events']);

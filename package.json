@@ -21,13 +21,14 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "auth0-js": "^9.3.3",
     "core-js": "^2.4.1",
-    "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19",
-    "toastr": "^2.1.4",
     "jquery": "^3.3.1",
     "ng2f-bootstrap": "^0.0.4",
-    "ng2f-server": "^0.2.3"
+    "ng2f-server": "^0.2.3",
+    "rxjs": "^5.5.6",
+    "toastr": "^2.1.4",
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",
