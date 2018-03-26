@@ -29,25 +29,9 @@ import { Component, OnInit } from '@angular/core';
         `]
 })
 
-export class CreateEventComponent implements OnInit {
+export class CreateEventComponent {
     isDirty = true;
-    event: any;
     constructor(private router: Router, private eventService: EventService) {
-    }
-    ngOnInit() {
-        this.event = {
-            name: 'Ng Spectacular',
-            date: '26/03/2018',
-            time: '10am',
-            price: '324.89',
-            location: {
-                address: 'Magarpatta City',
-                city: 'Pune',
-                country: 'India'
-            },
-            onlineUrl: 'https://ngSpectacular.com',
-            imageUrl: 'https://ngSpectacular.com/logo.png'
-        };
     }
     saveEvent(formValues) {
         this.eventService.saveEvent(formValues);
