@@ -15,7 +15,7 @@ import { Error404Component } from './errors/404.component';
 import { ToastrService } from './common/toastr.service';
 import { AuthService } from './users/auth.service';
 import { Session } from 'protractor';
-
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 @NgModule({
   declarations: [
     EventAppComponent,
@@ -31,6 +31,7 @@ import { Session } from 'protractor';
   imports: [
     BrowserModule,
     FormsModule,
+    DropDownsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
