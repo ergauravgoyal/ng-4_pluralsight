@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
@@ -24,7 +24,6 @@ import { Router } from '@angular/router';
     .error :-moz-placeholder {
       color:#999;
     }
-    
     .error :ms-input-placeholder {
       color:#999;
     }
@@ -33,19 +32,31 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
+  private firstName: FormControl;
+  private lastName: FormControl;
   constructor(private auth: AuthService, private router: Router) {
 
   }
   ngOnInit() {
-    let firstName = new FormControl(this.auth.currentUser.firstName, Validators.required);
-    let lastName = new FormControl(this.auth.currentUser.lastName, Validators.required);
+    // By Passing FirstName as argument it will prepopulate the value in form
+    this.firstName = new FormControl(this.auth.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-Z].*')]);
+    // By Passing LastName as argument it will prepopulate the value in form
+    this.lastName = new FormControl(this.auth.currentUser.lastName, [Validators.required, Validators.pattern('[a-zA-Z].*')]);
     this.profileForm = new FormGroup({
-      firstName: firstName,
-      lastName: lastName
-    })
-  };
+      firstName: this.firstName,
+      lastName: this.lastName
+    });
+  }
+  validateFirstName() {
+    return this.firstName.valid || this.firstName.untouched;
+  }
+  validateLastName() {
+    return this.lastName.valid && this.lastName.untouched;
+  }
+  // This method will basically change the value of FirstName in "Welcome Message"
   saveProfile(formValues) {
     if (this.profileForm.valid) {
+      // Calling updateCurrentUser method of AuthService
       this.auth.updateCurrentUser(formValues.firstName, formValues.lastName);
       this.router.navigate(['events']);
     }
