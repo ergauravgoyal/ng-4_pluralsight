@@ -1,20 +1,17 @@
-import { SessionListComponent } from './events/event-details/session-list.component';
-import { CreateSessionComponent } from './events/event-details/create-session.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 import { EventAppComponent } from './events-app.component';
-import { EventsListComponent, EventThumbnailComponent, EventDetailsComponent, CreateEventComponent, EventRouteActivator } from './events';
-import { EventService } from './events/shared/event.service';
+import { EventsListComponent, EventThumbnailComponent, EventDetailsComponent, CreateEventComponent, EventRouteActivator, SessionListComponent, CreateSessionComponent } from './events';
+import { EventService } from './events/shared/event.service'
 import { NavBarComponent } from './nav/navbar.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
 import { ToastrService } from './common/toastr.service';
 import { AuthService } from './users/auth.service';
-import { Session } from 'protractor';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 @NgModule({
   declarations: [
@@ -23,10 +20,10 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    CreateSessionComponent,
     NavBarComponent,
+    Error404Component,
     SessionListComponent,
-    Error404Component
+    CreateSessionComponent
   ],
   imports: [
     BrowserModule,

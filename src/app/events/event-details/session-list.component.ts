@@ -1,4 +1,4 @@
-import { ISession } from './../shared/event.model';
+import { ISession } from '../shared/session.model';
 import { Component, Input } from '@angular/core';
 
 @Component({

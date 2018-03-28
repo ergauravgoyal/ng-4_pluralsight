@@ -18,4 +18,3 @@ export const appRoutes: Routes = [
     { path: '', redirectTo: '/events', pathMatch: 'full' },
     { path: 'users', loadChildren: () => UsersModule }
 ];
-

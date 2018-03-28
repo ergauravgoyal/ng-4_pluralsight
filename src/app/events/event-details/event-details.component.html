@@ -34,6 +34,10 @@
             <a (click)="addSession()">Add Session</a>
         </div>
     </div>
+    <!-- It basically shows that we want to bind session property from 
+        sessionList Component to the session Array on
+         event object and event object is in event detail component -->
+
     <session-list *ngIf="!addMode" [sessions]="event?.sessions">
     </session-list>
     <create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)">

@@ -1,11 +1,11 @@
-import { ISession } from './../shared/event.model';
 import { EventService } from './../shared/event.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IEvent } from '../shared/event.model';
+import { ISession } from '../shared/session.model';
 
 @Component({
-    // tslint:disable-next-line:component-selector
+     // tslint:disable-next-line:component-selector
     selector: '',
     templateUrl: 'event-details.component.html',
     styles: [
