@@ -21,6 +21,10 @@ export class EventService {
         event.session = [];
         EVENTS.push(event);
     }
+    updateEvent(event){
+        let index=EVENTS.findIndex(x=>x.id=event.id);
+        EVENTS[index]=event;
+    }
 }
 
 const EVENTS: IEvent[] = [
@@ -33,6 +37,7 @@ const EVENTS: IEvent[] = [
         imageUrl: '/assets/images/angularconnect-shield.png',
         location: {
             address: '1057 DT',
+            city:'London',
             country: 'England'
         },
         sessions: [

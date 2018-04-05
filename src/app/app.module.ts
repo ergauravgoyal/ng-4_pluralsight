@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 
 import { EventAppComponent } from './events-app.component';
-import { EventsListComponent, EventThumbnailComponent, EventDetailsComponent, CreateEventComponent, EventRouteActivator, SessionListComponent, CreateSessionComponent } from './events';
+import { EventsListComponent, EventThumbnailComponent, EventDetailsComponent, CreateEventComponent, EventRouteActivator, SessionListComponent, CreateSessionComponent, DurationPipe} from './events';
 import { EventService } from './events/shared/event.service'
 import { NavBarComponent } from './nav/navbar.component';
 import { RouterModule } from '@angular/router';
@@ -13,6 +13,7 @@ import { Error404Component } from './errors/404.component';
 import { ToastrService } from './common/toastr.service';
 import { AuthService } from './users/auth.service';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
 @NgModule({
   declarations: [
     EventAppComponent,
@@ -23,7 +24,9 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     NavBarComponent,
     Error404Component,
     SessionListComponent,
-    CreateSessionComponent
+    CreateSessionComponent,
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,

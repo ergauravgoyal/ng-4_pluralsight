@@ -5,7 +5,7 @@ import { IEvent } from '../shared/event.model';
 import { ISession } from '../shared/session.model';
 
 @Component({
-     // tslint:disable-next-line:component-selector
+    // tslint:disable-next-line:component-selector
     selector: '',
     templateUrl: 'event-details.component.html',
     styles: [
@@ -25,6 +25,7 @@ import { ISession } from '../shared/session.model';
 export class EventDetailsComponent implements OnInit {
     event: IEvent;
     addMode: boolean;
+    filterBy: string = 'all';
     constructor(private eventService: EventService, private route: ActivatedRoute) {
 
     }
@@ -36,5 +37,9 @@ export class EventDetailsComponent implements OnInit {
     }
     saveNewSession(session: ISession) {
         const nextId = Math.max.apply(null, this.event.sessions.map(s => s.id));
+        session.id = nextId + 1;
+        this.event.sessions.push(session);
+        this.eventService.updateEvent(this.event);
+        this.addMode = false;
     }
 }
