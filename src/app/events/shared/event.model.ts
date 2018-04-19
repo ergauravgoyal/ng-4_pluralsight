@@ -1,4 +1,4 @@
-import { ISession } from "./session.model";
+import { ISession } from './session.model';
 
 export interface IEvent {
     id: number;

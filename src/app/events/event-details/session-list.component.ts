@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
     templateUrl: 'session-list.component.html'
 })
 export class SessionListComponent {
-    @Input() sessions: ISession[];  
+    @Input() sessions: ISession[];
 }

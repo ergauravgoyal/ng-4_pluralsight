@@ -4,11 +4,11 @@ import { Component, OnInit } from '@angular/core';
 import { IEvent } from '../shared/event.model';
 
 @Component({
-    // tslint:disable-next-line:component-selector
-    selector: 'create-session',
-    templateUrl: 'create-session.component.html',
-    styles: [
-      `
+  // tslint:disable-next-line:component-selector
+  selector: 'create-session',
+  templateUrl: 'create-session.component.html',
+  styles: [
+    `
           em {
             float:right;
             color:#E05C65;
@@ -30,48 +30,48 @@ import { IEvent } from '../shared/event.model';
             color:#999;
           }
           `]
-  })
-  
-  export class CreateSessionComponent implements OnInit {
-    sessionName: FormControl;
-    presenter: FormControl;
-    duration: FormControl;
-    level: FormControl;
-    abstract: FormControl;
-    name: FormControl;
-    newSessionForm: FormGroup;
-    ngOnInit() {
-      this.name = new FormControl('', Validators.required);
-      this.presenter = new FormControl('', Validators.required);
-      this.duration = new FormControl('', Validators.required);
-      this.level = new FormControl('', Validators.required);
-      // this.abstract = new FormControl('', [Validators.required, Validators.maxLength(400), this.restrictedWords(['foo', 'bar'])]);
-      this.abstract = new FormControl('', [Validators.required, Validators.maxLength(400)]);
-      this.sessionName = new FormControl('', Validators.required);
-      this.newSessionForm = new FormGroup({
-        name: this.name,
-        presenter: this.presenter,
-        duration: this.duration,
-        abstract: this.abstract,
-        level: this.level
-      });
-    }
-    // private restrictedWords(words) {
-    //     return (control: FormControl): { [key: string]: any } => {
-    //         return control.value.includes('foo') ? ('restrictedWords' : 'foo'): null;
-    //     };
-    // }
-    saveSession(formValues) {
-      const session: ISession = {
-        id: undefined,
-        name: formValues.name,
-        duration: formValues.duration,
-        presenter: formValues.presenter,
-        level: formValues.level,
-        abstract: formValues.abstract,
-        voters: []
-      };
-      console.log(session);
-    }
+})
+
+export class CreateSessionComponent implements OnInit {
+  sessionName: FormControl;
+  presenter: FormControl;
+  duration: FormControl;
+  level: FormControl;
+  abstract: FormControl;
+  name: FormControl;
+  newSessionForm: FormGroup;
+  ngOnInit() {
+    this.name = new FormControl('', Validators.required);
+    this.presenter = new FormControl('', Validators.required);
+    this.duration = new FormControl('', Validators.required);
+    this.level = new FormControl('', Validators.required);
+    // this.abstract = new FormControl('', [Validators.required, Validators.maxLength(400), this.restrictedWords(['foo', 'bar'])]);
+    this.abstract = new FormControl('', [Validators.required, Validators.maxLength(400)]);
+    this.sessionName = new FormControl('', Validators.required);
+    this.newSessionForm = new FormGroup({
+      name: this.name,
+      presenter: this.presenter,
+      duration: this.duration,
+      abstract: this.abstract,
+      level: this.level
+    });
   }
-  
+  // private restrictedWords(words) {
+  //     return (control: FormControl): { [key: string]: any } => {
+  //         return control.value.includes('foo') ? ('restrictedWords' : 'foo'): null;
+  //     };
+  // }
+  saveSession(formValues) {
+    const session: ISession = {
+      id: undefined,
+      name: formValues.name,
+      duration: formValues.duration,
+      presenter: formValues.presenter,
+      level: formValues.level,
+      abstract: formValues.abstract,
+      voters: []
+    };
+    console.log(session);
+  }
+}
+

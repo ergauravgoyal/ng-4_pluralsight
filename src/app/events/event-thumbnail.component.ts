@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import {IEvent} from './shared/index'
+import { IEvent } from './shared/index';
 
 @Component({
     selector: 'event-thumbnail',
     templateUrl: 'event-thumbnail.component.html',
-    styles:[
+    styles: [
         `.black{
             color:#000000 !important;
         }
@@ -25,14 +25,15 @@ import {IEvent} from './shared/index'
 })
 
 export class EventThumbnailComponent {
-    @Input() event:IEvent;
-    thumbnailMsg:any="This message from Child Component";
-    logFoo(){
-        console.log("Message from Child Component after button click");
+    @Input() event: IEvent;
+    thumbnailMsg: any = 'This message from Child Component';
+    logFoo() {
+        console.log('Message from Child Component after button click');
     }
-    getStartTimeClass():any{
-        if(this.event && this.event.time==='8:00 am')
-            return ["black","bold"]
-        return ""
+    getStartTimeClass(): any {
+        if (this.event && this.event.time === '8:00 am') {
+            return ['black', 'bold'];
+        }
+        return '';
     }
 }
