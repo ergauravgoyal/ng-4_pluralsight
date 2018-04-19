@@ -46,7 +46,7 @@ import { DurationPipe } from './events/shared/duration.pipe';
     DropDownsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(environment.firebase,'angular-auth-firebase'),
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
