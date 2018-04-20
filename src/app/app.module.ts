@@ -25,6 +25,7 @@ import { AuthService } from './users/auth.service';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe';
+import { Toastr,TOASTR_TOKEN } from './common/toastr.service';
 
 declare let toastr: Toastr;
 
