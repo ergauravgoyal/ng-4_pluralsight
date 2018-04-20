@@ -39,6 +39,7 @@
     "@angular/cli": "^1.7.4",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
+    "@ngx-i18n-router/core": "^5.0.0",
     "@progress/kendo-angular-buttons": "^3.0.4",
     "@progress/kendo-angular-dropdowns": "^2.1.0",
     "@progress/kendo-angular-l10n": "^1.1.0",

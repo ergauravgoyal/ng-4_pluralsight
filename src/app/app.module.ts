@@ -21,11 +21,13 @@ import { NavBarComponent } from './nav/navbar.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
-import { ToastrService } from './common/toastr.service';
 import { AuthService } from './users/auth.service';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe';
+
+declare let toastr: Toastr;
+
 @NgModule({
   declarations: [
     EventAppComponent,
@@ -52,7 +54,6 @@ import { DurationPipe } from './events/shared/duration.pipe';
   ],
   providers: [EventService,
     EventRouteActivator,
-    ToastrService,
     AuthService,
     {
       provide: 'canDeactivateCreateEvent',
