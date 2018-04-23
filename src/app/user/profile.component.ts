@@ -43,7 +43,7 @@ export class ProfileComponent implements OnInit {
   validateFirstName() {
     return this.firstName.valid || this.firstName.untouched
   }
-
+  
   validateLastName() {
     return this.lastName.valid || this.lastName.untouched
   }
@@ -51,5 +51,5 @@ export class ProfileComponent implements OnInit {
   cancel() {
     this.router.navigate(['events'])
   }
-
+       
 }
