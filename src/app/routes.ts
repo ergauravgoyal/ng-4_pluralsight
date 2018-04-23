@@ -6,7 +6,7 @@ import {
     EventRouteActivator
 } from './events/index';
 import { Error404Component } from './errors/404.component';
-import { UsersModule } from './users/users.module';
+import { UsersModule } from './user/users.module';
 import { CreateSessionComponent } from './events/event-details';
 
 export const appRoutes: Routes = [

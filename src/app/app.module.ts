@@ -17,17 +17,14 @@ import {
   CreateSessionComponent
 } from './events';
 import { EventService } from './events/shared/event.service';
-import { NavBarComponent } from './nav/navbar.component';
+import { NavBarComponent } from './nav/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.component';
-import { AuthService } from './users/auth.service';
+import { AuthService } from './user/auth.service';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { DurationPipe } from './events/shared/duration.pipe';
-import { Toastr,TOASTR_TOKEN } from './common/toastr.service';
-
-declare let toastr: Toastr;
 
 @NgModule({
   declarations: [

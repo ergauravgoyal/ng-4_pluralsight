@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import { AuthService } from '../users/auth.service';
+import { AuthService } from '../user/auth.service';
 
 @Component({
     selector:'nav-bar',
-    templateUrl:'navbar.component.html',
+    templateUrl:'nav-bar.component.html',
     styles:[
         `
         .nav.navbar-nav{
