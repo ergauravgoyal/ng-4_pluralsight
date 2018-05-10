@@ -1,4 +1,4 @@
-import { environment } from './../environments/environment.prod';
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
@@ -24,7 +24,8 @@ import { NavBarComponent } from './nav/nav-bar.component'
 import { ToastrService } from './common/toastr.service'
 import { appRoutes } from './routes'
 import { Error404Component } from './errors/404.component'
-import { AuthService } from './user/auth.service'
+import { AuthService } from './user/auth.service';
+// import { AuthService } from './services/auth.service'
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 
