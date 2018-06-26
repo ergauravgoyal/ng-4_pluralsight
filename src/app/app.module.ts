@@ -17,7 +17,9 @@ import {
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
+  VoterService
 } from "./events/index";
 
 import { NavBarComponent } from "./nav/nav-bar.component";
@@ -39,6 +41,7 @@ import { CollapsibleWellComponent } from "./common/collapsible-well.component";
     NavBarComponent,
     Error404Component,
     SessionListComponent,
+    UpvoteComponent,
     CreateSessionComponent,
     CollapsibleWellComponent,
     DurationPipe
@@ -61,6 +64,7 @@ import { CollapsibleWellComponent } from "./common/collapsible-well.component";
     ToastrService,
     EventRouteActivator,
     EventListResolver,
+    VoterService,
     AuthService,
     {
       provide: "canDeactivateCreateEvent",
