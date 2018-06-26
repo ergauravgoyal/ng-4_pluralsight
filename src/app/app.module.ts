@@ -1,12 +1,12 @@
-import { environment } from './../environments/environment';
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { EventsAppComponent } from './events-app.component'
+import { environment } from "./../environments/environment";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule, ActivatedRouteSnapshot } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { EventsAppComponent } from "./events-app.component";
 import {
   EventsListComponent,
   EventThumbnailComponent,
@@ -18,19 +18,19 @@ import {
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe
-} from './events/index'
+} from "./events/index";
 
-import { NavBarComponent } from './nav/nav-bar.component'
-import { ToastrService } from './common/toastr.service'
-import { appRoutes } from './routes'
-import { Error404Component } from './errors/404.component'
-import { AuthService } from './user/auth.service';
+import { NavBarComponent } from "./nav/nav-bar.component";
+import { ToastrService } from "./common/toastr.service";
+import { appRoutes } from "./routes";
+import { Error404Component } from "./errors/404.component";
+import { AuthService } from "./user/auth.service";
 // import { AuthService } from './services/auth.service'
-import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
-import { CollapsibleWellComponent } from './common/collapsible-well.component';
+import { DropDownsModule } from "@progress/kendo-angular-dropdowns";
+import { CollapsibleWellComponent } from "./common/collapsible-well.component";
 
 @NgModule({
-   declarations: [
+  declarations: [
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
@@ -49,7 +49,10 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
     DropDownsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    AngularFireModule.initializeApp(
+      environment.firebase,
+      "angular-auth-firebase"
+    ),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
@@ -60,7 +63,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
     EventListResolver,
     AuthService,
     {
-      provide: 'canDeactivateCreateEvent',
+      provide: "canDeactivateCreateEvent",
       useValue: checkDirtyState
     }
   ],
@@ -68,9 +71,11 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
 })
 export class AppModule {}
 
-export function checkDirtyState(component:CreateEventComponent) {
-  if (component.isDirty){
-    return window.confirm('You have not saved this event, do you really want to cancel?');
+export function checkDirtyState(component: CreateEventComponent) {
+  if (component.isDirty) {
+    return window.confirm(
+      "You have not saved this event, do you really want to cancel?"
+    );
   }
   return true;
 }
